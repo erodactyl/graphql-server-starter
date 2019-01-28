@@ -1,0 +1,31 @@
+{
+  "name": "dohirus_backend",
+  "version": "1.0.0",
+  "description": "Dockerized NodeJS Postgres and Apollo starter",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/erodactyl/graphql-server-starter"
+  },
+  "scripts": {
+    "start": "npm run serve",
+    "serve": "node index.js",
+    "db:migrate": "sequelize db:migrate",
+    "db:seed": "sequelize db:seed:all",
+    "db:drop": "sequelize db:drop"
+  },
+  "author": "Erik Davtyan",
+  "license": "MIT",
+  "dependencies": {
+    "apollo-datasource": "^0.2.2",
+    "apollo-server": "^2.3.2",
+    "dotenv": "^6.2.0",
+    "faker": "^4.1.0",
+    "graphql": "^14.1.1",
+    "pg": "^7.8.0",
+    "sequelize": "^4.42.0"
+  },
+  "devDependencies": {
+    "eslint": "^5.12.1",
+    "sequelize-cli": "^5.4.0"
+  }
+}
