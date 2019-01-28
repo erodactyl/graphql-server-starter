@@ -9,6 +9,7 @@
   "scripts": {
     "start": "npm run db:migrate && npm run serve",
     "serve": "node index.js",
+    "dev": "nodemon index.js",
     "db:migrate": "sequelize db:migrate",
     "db:seed": "NODE_ENV=local sequelize db:seed:all",
     "db:drop": "sequelize db:drop"
@@ -26,6 +27,7 @@
   },
   "devDependencies": {
     "eslint": "^5.12.1",
+    "nodemon": "^1.18.9",
     "sequelize-cli": "^5.4.0"
   }
 }

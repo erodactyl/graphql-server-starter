@@ -25,9 +25,12 @@ services:
       dockerfile: ./Dockerfile
     ports:
       - "8080:8080"
+    volumes:
+      - .:/usr/src/app
     environment:
       PORT: 8080
       NODE_ENV: development
+    command: npm run dev
     restart: always
     depends_on:
       - "db"
