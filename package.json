@@ -7,10 +7,10 @@
     "url": "https://github.com/erodactyl/graphql-server-starter"
   },
   "scripts": {
-    "start": "npm run serve",
+    "start": "npm run db:migrate && npm run serve",
     "serve": "node index.js",
     "db:migrate": "sequelize db:migrate",
-    "db:seed": "sequelize db:seed:all",
+    "db:seed": "NODE_ENV=local sequelize db:seed:all",
     "db:drop": "sequelize db:drop"
   },
   "author": "Erik Davtyan",
