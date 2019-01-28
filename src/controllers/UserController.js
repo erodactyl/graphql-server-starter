@@ -13,6 +13,10 @@ class UserController extends DataSource {
   getUserById(id) {
     return this.store.User.findOne({ where: { id } });
   }
+
+  createUser({ name }) {
+    return this.store.User.create({ name });
+  }
 }
 
 module.exports = UserController;

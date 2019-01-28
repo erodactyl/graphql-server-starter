@@ -17,6 +17,10 @@ class PostController extends DataSource {
   getPostsByUser(userId) {
     return this.store.Post.findAll({ where: { userId } });
   }
+
+  createPost({ title, text, userId }) {
+    return this.store.Post.create({ title, text, userId });
+  }
 }
 
 module.exports = PostController;

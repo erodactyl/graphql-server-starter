@@ -6,6 +6,21 @@ const typeDefs = gql`
     post(id: ID!): Post
   }
 
+  type Mutation {
+    addUser(user: UserInput!): User
+    addPost(post: PostInput!): Post
+  }
+
+  input UserInput {
+    name: String!
+  }
+
+  input PostInput {
+    title: String!
+    text: String!
+    userId: ID!
+  }
+
   type Post {
     id: ID!
     title: String!
